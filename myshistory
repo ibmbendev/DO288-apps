@@ -1,0 +1,526 @@
+    1  hostname
+    2  su -
+    3  lab-configure
+    4  git clone https://github.com/yourgituser/DO288-apps
+    5  git clone https://github.com/ibmbendev/DO288-apps
+    6  clear
+    7  ls
+    8  cd D0288-apps
+    9  ls -al
+   10  cd DO288-apps/
+   11  dir
+   12  lks
+   13  ls
+   14  ls -al
+   15  git statu
+   16  git status
+   17  head read
+   18  head readme
+   19  head README.md
+   20  cd !
+   21  cd ~
+   22  cat /usr/local/etc/ocp4.config 
+   23  cat /usr/local/etc/ocp4.defaults 
+   24  source /usr/local/etc/ocp4.config 
+   25  echo $RHT_OCP4_MASTER_API
+   26  cd
+   27  vi initocp.sh
+   28  chmo u+x initocp.sh 
+   29  chmod u+x initocp.sh 
+   30  sh initocp.sh 
+   31  oc login -u $RHT_OCP4_DEV_USER -p $RHT_OCP4_DEV_PASSWORD $RHT_OCP4_MASTER_API 
+   32  oc logout
+   33  oc login -u $RHT_OCP4_DEV_USER -p $RHT_OCP4_DEV_PASSWORD $RHT_OCP4_MASTER_API 
+   34  oc logout
+   35  history
+   36  reset
+   37  oc login -u $RHT_OCP4_DEV_USER -p $RHT_OCP4_DEV_PASSWORD $RHT_OCP4_MASTER_API 
+   38  oc get nodes
+   39  ps -ef
+   40  podman
+   41  podman images
+   42  su -
+   43  oc explain dc
+   44  oc whoamin
+   45  oc whoami
+   46  oc project
+   47  oc new-project supangbe-february
+   48  oc project
+   49  oc login
+   50  oc project
+   51  oc get all
+   52  pw
+   53  pwd
+   54  reset
+   55  pwd
+   56  cd DO288-apps/
+   57  ls
+   58  oc new-app --name monday24 https://github.com/ibmbendev/DO288-apps --context-dir=php-scale
+   59  oc expose svc/monday24
+   60  oc pods
+   61  ocget  pods
+   62  oc get pod
+   63  oc start build
+   64  oc start-build
+   65  oc get bc
+   66  oc start-build help
+   67  oc get is
+   68  lab docker-build start
+   69  git checkout master
+   70  git checkout -b docker-build
+   71  git push -u origin docker-build
+   72  cat ubi-echo/Dockerfile 
+   73  clear
+   74  cat ubi-echo/Dockerfile 
+   75  ls
+   76  cat /usr/local/etc/ocp4.config 
+   77  echo $RHT_OCP4_MASTER_API
+   78  oc login -u $RHT_OCP4_DEV_USER -p $RHT_OCP4_DEV_PASSWORD $RHT_OCP4_MASTER_API 
+   79  oc new-project supangbe-docker-build
+   80  oc new-app --name echo https://github.com/ibmbendev/DO288-apps#docker-build --context-dir ubi-echo
+   81  oc logs -f bc/echo
+   82  oc status'
+   83  oc status
+   84  oc get pod
+   85  oc logs echo-1-hj9mw | tail -n 3
+   86  oc logs echo-1-hj9mw 
+   87  oc logs echo-1-hj9mw | tail -f 
+   88  oc describe bc echo
+   89  oc describe is echo
+   90  ls
+   91  pwd
+   92  cd ubi-
+   93  cd ubi-echo
+   94  ls
+   95  cd ..
+   96  ls
+   97  oc descrbe dc echo
+   98  oc describe dc echo
+   99  oc logs echo-1-hj9mw | tail -f 
+  100  oc logs echo-1-hj9mw 
+  101  vi ubi-echo/Dockerfile 
+  102  git commit -a -m 'Add a counter'
+  103  git status
+  104  cd ubi-echo/
+  105  git status
+  106  git push
+  107  cd 
+  108  oc start-build echo
+  109  oc logs -f bc/echo
+  110  oc get pod
+  111  oc logs echo-2-n2fb2 
+  112  oc describe is echo
+  113  oc get all
+  114  oc delete all -l app=echo
+  115  lab docker-build finish
+  116  lab deploy-image start
+  117  oc get route -n openshift-console
+  118  lab deploy-image finish
+  119  ls
+  120  cd DO288
+  121  ls
+  122  cd ..
+  123  ls
+  124  cd DO288-apps/
+  125  ls
+  126  cat ubi-echo/Dockerfile 
+  127  cat ubi-info/Dockerfile 
+  128  cat ubi-info/info.sh 
+  129  oc get pods
+  130  oc get route
+  131  oc status'
+  132  oc status
+  133  oc login -u $RHT_OCP4_DEV_USER -p $RHT_OCP4_DEV_PASSWORD $RHT_OCP4_MASTER_API 
+  134  oc status
+  135  oc get dc -wide
+  136  oc get dc --wide
+  137  oc get dc -o wide
+  138  oc get dc
+  139  oc get dc/monday24
+  140  cd /home/student/ /absc
+  141  cd 
+  142  ls /home/student/ /absc
+  143  ls /home/student/ /absc > tmp.log
+  144  cat tmp.log 
+  145  ls /home/student/ /absc 2> tmp.log
+  146  cat tmp.log 
+  147  ls /home/student/ /absc 2 > tmp.log
+  148  cat tmp.log 
+  149  ls /home/student/ /absc 2> tmp.log
+  150  echo hello
+  151  echo hello | cat 
+  152  oc get pods
+  153  oc rsh monday24-1-n6pcp
+  154  clear
+  155  oc get pods
+  156  lab build-template start
+  157  ls
+  158  cd
+  159  cd DO288-app
+  160  cd DO288-apps/
+  161  git checkout master
+  162  cd quotes/
+  163  ls
+  164  less get.php 
+  165  cat get.php 
+  166  more ../../DO288/labs/build-template/php-mysql-ephemeral.json 
+  167  source /usr/local/etc/ocp4.config 
+  168  oc login -u $RHT_OCP4_DEV_USER -p $RHT_OCP4_DEV_PASSWORD $RHT_OCP4_MASTER_API 
+  169  oc get templates -n openshift | grep php | grep mysql
+  170  oc new-project supangbe-common 
+  171  oc create -f ~/DO288/labs/build-template/php-mysql-ephemeral.json 
+  172  oc new-project supangbe-build-template
+  173  oc describe template php-mysql-ephemeral -n supangbe-common
+  174  cat ~/DO288/labs/build-template/create-app.sh 
+  175  ~/DO288/labs/build-template/create-app.sh 
+  176  oc logs
+  177  oc logs -f bc/quotesapi
+  178  oc get pod
+  179  oc logs -f bc/quotesapi
+  180  oc get pod
+  181  oc get route
+  182  oc describe svc/quotesdb | grep endpoints
+  183  oc describe svc/quotesdb | grep-i  endpoints
+  184  oc describe svc/quotesdb | grep -i endpoints
+  185  oc get pod
+  186  oc describe pod quotesdb-1-ktf6r
+  187  oc describe pod quotesdb-1-ktf6r | grep IP
+  188  clear
+  189  oc describe svc/quotesdb | grep -i endpoints
+  190  oc describe pod quotesdb-1-ktf6r | grep IP
+  191  oc describe pod quotesdb-1-ktf6r | grep -A 4 Environment
+  192  oc get pod
+  193  oc describe pod quotesapi-1-wzqh8 | grep -A 4 Environment
+  194  oc rsh quotesapi-1-wzqh8 bash -c 'echo > /dev/tcp/$DATABASE_SERVICE_NAME/3306 && echo OK || echo FAIL'
+  195  oc logs quotesapi-1-wzqh8 
+  196  oc logs quotesapi-1-wzqh8 | grep Error
+  197  oc get pod
+  198  oc  cp ~/DO288/labs/build-template/quote.sql quotesdb-1-ktf6r:/tmp/quote.sql
+  199  oc rsh -t quotesdb-1-ktf6r
+  200  oc get route
+  201  curl -si quote-supangbe.apps.ocp-ap3.prod.nextcle.com/get.php
+  202  oc logs
+  203  oc get pod
+  204  oc logs quotesapi-1-wzqh8
+  205  oc whoami
+  206  oc delete project supangbe-build-template
+  207  oc delete project supangbe-build-common
+  208  lab build-template finish
+  209  lab source-build start
+  210  cd 
+  211  cd DO288-apps/
+  212  ls
+  213  cd nodejs-helloworld/
+  214  ls
+  215  cd ..
+  216  ls
+  217  oc new-project supangbe-source-build
+  218  git checkout master
+  219  git checkout -b source-build
+  220  git push -u origin source-build
+  221  oc new-app --name greet https://github.com/supangbe/DO288-apps#source-build --context-dir nodejs-helloworld 
+  222  oc get pods
+  223  oc get pod
+  224  oc status
+  225  oc new-app --name greet https://github.com/ibmbendev/DO288-apps#source-build --context-dir nodejs-helloworld 
+  226  oc log
+  227  get pods
+  228  oc get pod
+  229  lab source-build grade
+  230  history
+  231  cat /usr/local/etc/ocp4.config 
+  232   oc new-app --name greet https://github.com/ibmbendev/DO288-apps#source-build --context-dir nodejs-helloworld --build-env npm_config_registry=$RHT_OCP4_NEXUS_SERVER
+  233   oc new-app --name greet2 https://github.com/ibmbendev/DO288-apps#source-build --context-dir nodejs-helloworld --build-env npm_config_registry=$RHT_OCP4_NEXUS_SERVER
+  234  oc get pods
+  235  oc logs greet-1-build
+  236  oc get pods
+  237  oc logs greet2-1-build 
+  238  clear
+  239  ls
+  240  cat initocp.sh 
+  241  ./initocp.sh 
+  242  lab source-build grade
+  243  ls
+  244  cd DO288-apps/
+  245  ls
+  246  oc login -u $RHT_OCP4_DEV_USER -p $RHT_OCP4_DEV_PASSWORD $RHT_OCP4_MASTER_API 
+  247  cat ubi-echo/
+  248  cat ubi-echo/Dockerfile 
+  249  cat ubi-info/info.sh 
+  250  cat ubi-info/Dockerfile 
+  251  cat s2i-scripts/index.html 
+  252  cat s2i-scripts/.s2i/bin/assemble 
+  253  cat
+  254  ls
+  255  cat ubi-echo/
+  256  cat ubi-echo/Dockerfile 
+  257  cd ima
+  258  cd myim
+  259  ls
+  260  pwd
+  261  podman images
+  262  podman
+  263  ls
+  264  clear
+  265  cd ..
+  266  podman images
+  267  su
+  268  ;ls
+  269  ls
+  270  cd DO288-apps/
+  271  cd container-build/src/
+  272  ls
+  273  cat index.html 
+  274  cd ..
+  275  ls
+  276  pwd
+  277  ls -al
+  278  cd ..
+  279  ls
+  280  cd ..
+  281  ls
+  282  cd DO288
+  283  ls
+  284  cd la
+  285  l
+  286  cd labs/
+  287  ls
+  288  pwd
+  289  cd ..
+  290  ls
+  291  pwd
+  292  lab container-build start
+  293  ls
+  294  cd labs/
+  295  ls
+  296  cd container-build/
+  297  la
+  298  ls
+  299  cd httpd-parent/
+  300  ls
+  301  cat Dockerfile 
+  302  lab source-build finish
+  303  cd
+  304  ./initocp.sh 
+  305  cd DO288-apps/
+  306  ls
+  307  git checkout master
+  308  git checkout -b container-build
+  309  git push -u origin container-build 
+  310  cat ../DO288/labs/container-build/httpd-parent/
+  311  cat ../DO288/labs/container-build/httpd-parent/Dockerfile 
+  312  cat ~/DO288-apps/container-build/Dockerfile 
+  313  cd ~/DO288-apps/container-build/
+  314  ls
+  315  cd src/
+  316  ls
+  317  cat index.html 
+  318  oc login -u $RHT_OCP4_DEV_USER -p $RHT_OCP4_DEV_PASSWORD $RHT_OCP4_MASTER_API 
+  319  oc login -u $RHT_OCP4_DEV_USER -p$RHT_OCP4_DEV_PASSWORD $RHT_OCP4_MASTER_API 
+  320  cat /usr/local/etc/ocp4.c
+  321  cat /usr/local/etc/ocp4.config 
+  322  source /usr/local/etc/ocp4.config 
+  323  oc login -u $RHT_OCP4_DEV_USER -p $RHT_OCP4_DEV_PASSWORD $RHT_OCP4_MASTER_API 
+  324  oc new-project supangbe-container-build 
+  325  oc new-app --name hola https://github.com/ibmbendev/DO288-apps#container-build --contex-dir container-build 
+  326  oc new-app --name hola https://github.com/ibmbendev/DO288-apps#container-build --context-dir container-build 
+  327  oc logs -f bc/hola
+  328  sudo podman images
+  329  oc get pods
+  330  oc logs hola-1-h5c8v
+  331  oc delete all -l app-hola
+  332  oc delete all -l app-
+  333  oc delete all -l app-hola
+  334  ls
+  335  cd..
+  336  ls
+  337  cd ..
+  338  ls
+  339  vi Dockerfile 
+  340  pwd
+  341  cd ..
+  342  ls
+  343  cat ~/DO288/solutions/container-build/Dockerfile 
+  344  vi Dockerfile 
+  345  pwd
+  346  ls
+  347  cd container-build/
+  348  la
+  349  ls
+  350  vi Dockerfile 
+  351  git commit -a -m "Changed Dockerfile to enable running as random uid on OpenShift"
+  352  git push
+  353  oc get pod
+  354  oc new-app --name hola https://github.com/ibmbendev/DO288-apps#container-build --context-dir container-build
+  355  oc delete all -l app-hola
+  356  oc get pods
+  357  oc delete all -l app-hola
+  358  oc delete all -L app
+  359  oc get  all -L app
+  360  oc delete all -l app=hola
+  361  oc new-app --name hola https://github.com/ibmbendev/DO288-apps#container-build --context-dir container-build
+  362  oc expose svc/hola
+  363  oc get route
+  364  oc get pods
+  365  oc get route
+  366  oc get pods
+  367  oc logs -f bc/hola
+  368  oc get pods
+  369  oc get route
+  370  curl hola-supangbe-container-build.apps.ocp-ap3.prod.nextcle.com
+  371  oc delete project supangbe-container-build
+  372  lab container-build finish
+  373  lab container-bu
+  374  lab app-config star
+  375  lab app-config start
+  376  cd
+  377  cd DO288-apps/
+  378  ls
+  379  git checkout maste
+  380  git checkout master
+  381  git checkout -b app-config
+  382  git push -u origin app-config
+  383  cat app-config/app.js 
+  384  source /usr/local/etc/ocp4.config 
+  385  oc login -u $RHT_OCP4_DEV_USER -p $RHT_OCP4_DEV_PASSWORD $RHT_OCP4_MASTER_API 
+  386  oc new-project supangbe-app-config
+  387  cat ~/DO288/labs/app-config/oc-new-app.sh 
+  388  oc new-app --name myapp --build-env npm_config_registry=http://${RHT_OCP4_NEXUS_SERVER}/repository/nodejs nodejs:10~http://github.com/ibmbendev/DO288-apps#app-config --context-dir app-config
+  389  oc logs -f bc/myapp
+  390  oc get pods
+  391  oc logs -f bc/myapp
+  392  oc get pods
+  393  oc expose svc/myapp
+  394  oc get route
+  395  curl myapp-supangbe-app-config.apps.ocp-ap3.prod.nextcle.com
+  396  oc create configmap myappconf --from-literal APP_MSG="Test Message"
+  397  oc describe cm/myappconf
+  398  cat app-config/myapp.sec 
+  399  oc create secret generic myappfilesec --from-file /home/student/DO288-apps/app-config/myapp.sec 
+  400  oc get secret/myappfilesec -o json
+  401  oc set env dc/myapp --from configmap/myappconf
+  402  oc get pods
+  403  oc get logs myapp-2-deploy
+  404  oc log myapp-2-deploy
+  405  oc get pods
+  406  curl myapp-supangbe-app-config.apps.ocp-ap3.prod.nextcle.com
+  407  oc set volume dc/myapp --add -t secret -m /opt/app-root/secure --name myappsec-vol --secret-name myappfilesec
+  408  oc status
+  409  oc get pods
+  410  oc rsh myapp-3-dj84h env | grep APP_MSG
+  411  curl myapp-supangbe-app-config.apps.ocp-ap3.prod.nextcle.com
+  412  oc edit cm/myap
+  413  oc edit cm/myappconf
+  414  oc describe cm/myappconf
+  415  oc get pod
+  416  oc rollout latest
+  417  oc get pod
+  418  oc rollout latest dc/myapp
+  419  oc get pod
+  420  curl myapp-supangbe-app-config.apps.ocp-ap3.prod.nextcle.com
+  421  oc delete project supangbe-app-config
+  422  lab app-config finish
+  423  lab design-container start
+  424  cd hello-java/
+  425  ls
+  426  cd ..
+  427  ls
+  428  git checkout master
+  429  git checkout -b design-container
+  430  git push -u origin design-container 
+  431  source /usr/local/etc/ocp4.config 
+  432  oc login -u $RHT_OCP4_DEV_USER -p $RHT_OCP4_DEV_PASSWORD $RHT_OCP4_MASTER_API 
+  433  oc new-project supangbe-design-container
+  434  pwd
+  435  cd ..
+  436  cd DO288
+  437  cd labs/
+  438  ls
+  439  cd design-container/
+  440  ls
+  441  cat oc-new-app.sh 
+  442  oc new-app --name elvis https://github.com/ibmbendev/DO288-apps#design-container --context-dir hello-java
+  443  pwd
+  444  cd ..
+  445  ls
+  446  cd ..
+  447  ls
+  448  cd solutions/
+  449  ls
+  450  cat design-container/Dockerfile 
+  451  oc get pods
+  452  oc logs -f dc/elvis
+  453  oc log elvis-1-build
+  454  oc get pods
+  455  cd -
+  456  pwd
+  457  cd 
+  458  cd DO288-apps/
+  459  ls
+  460  cd hello-java/
+  461  ls
+  462  cat run-app.sh 
+  463  ls
+  464  cat Dockerfile 
+  465  oc get pods
+  466  oc log elvis-1-ncdlf
+  467  oc get pods
+  468  oc log elvis-1-build
+  469  oc rollout latest dc/elvis
+  470  oc get pods
+  471  oc log elvis-1-ncdlf
+  472  cat Dockerfile 
+  473  vi Dockerfile 
+  474  git commit -a -m "updatd RUN with group is 0"
+  475  git push
+  476  ls
+  477  oc delete all -l app=elvis
+  478  oc new-app --name elvis https://github.com/ibmbendev/DO288-apps#design-container --context-dir hello-java
+  479  oc status
+  480  oc get pods
+  481  oc expose svc/elvis
+  482  oc get route
+  483  curl elvis-supangbe-design-container.apps.ocp-ap3.prod.nextcle.com
+  484  oc get pods
+  485  history
+  486  oc logs bc/elvis
+  487  oc get pods
+  488  oc logs bc/elvis
+  489  oc logs -f bc/elvis
+  490  oc get pods
+  491  curl elvis-supangbe-design-container.apps.ocp-ap3.prod.nextcle.com
+  492  curl elvis-supangbe-design-container.apps.ocp-ap3.prod.nextcle.com/api/hello
+  493  oc get pods
+  494  oc logs elvis-1-6ddv8
+  495  oc get route
+  496  curl elvis-supangbe-design-container.apps.ocp-ap3.prod.nextcle.com/api/hello
+  497  oc create configmap appconfig --from-literal APP_MSG="Elvis Lives"
+  498  history
+  499  oc get pods
+  500  oc describe cm/appconfig
+  501  oc set env dc/myapp --from configmap/appconfig
+  502  oc set env dc/elvis --from configmap/appconfig
+  503  oc get pods
+  504  history
+  505  oc logs -f bc/elvis
+  506  oc get pods
+  507  curl elvis-supangbe-design-container.apps.ocp-ap3.prod.nextcle.com/api/hello
+  508  oc logs -f bc/elvis
+  509  oc get pods
+  510  curl elvis-supangbe-design-container.apps.ocp-ap3.prod.nextcle.com/api/hello
+  511  lab design-container grade
+  512  curl elvis-supangbe-design-container.apps.ocp-ap3.prod.nextcle.com/api/hello
+  513  oc edit cm/appconfi
+  514  oc edit cm/appconfig
+  515  oc get pods
+  516  history
+  517  oc get pods
+  518  oc rollout latest dc/elvis
+  519  oc get pods
+  520  oc logs -f bc/elvis
+  521  oc get pods
+  522  curl elvis-supangbe-design-container.apps.ocp-ap3.prod.nextcle.com/api/hello
+  523  lab design-container grade
+  524  lab design-container finish 
+  525  cd 
+  526  history >> myshistory
